@@ -171,8 +171,19 @@ docker run --rm litongjava/go-emqx-to-tdengine
 ```
 
 自定义 config.toml create.sql insert.sql
+```
 docker run --rm -v /path/to/local/config.toml:/app/config.toml \
                 -v /path/to/local/create.sql:/app/create.sql \
                 -v /path/to/local/insert.sql:/app/insert.sql \
                 litongjava/go-emqx-to-tdengine
 ```
+
+```shell
+docker build -t litongjava/go-emqx-to-tdengine:slim .
+```
+
+```shell
+docker run --rm litongjava/go-emqx-to-tdengine:slim
+```
+
+slim镜像的/app目录不包含TDengine-client文件,总体积是141MB
