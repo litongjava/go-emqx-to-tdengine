@@ -1,0 +1,9 @@
+emqxBroker = "192.168.3.9"
+emqxPort = 1883
+emqxUsername = "emqx"
+emqxPassword = "public"
+emqxTopic = "sensor/data"
+tdDriverName ="taosSql"
+tdDataSourceName= "root:taosdata@tcp(192.168.3.9:6030)/test"
+createSql= "create.sql"
+insertSql= "insert.sql"
