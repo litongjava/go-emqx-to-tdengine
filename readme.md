@@ -160,3 +160,8 @@ function generateMockData() {
   }
 }
 ```
+
+## docker
+```shell
+docker build -t litongjava/go-emqx-to-tdengine .
+```
