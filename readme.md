@@ -165,3 +165,14 @@ function generateMockData() {
 ```shell
 docker build -t litongjava/go-emqx-to-tdengine .
 ```
+测试运行
+```shell
+docker run --rm litongjava/go-emqx-to-tdengine
+```
+
+自定义 config.toml create.sql insert.sql
+docker run --rm -v /path/to/local/config.toml:/app/config.toml \
+                -v /path/to/local/create.sql:/app/create.sql \
+                -v /path/to/local/insert.sql:/app/insert.sql \
+                litongjava/go-emqx-to-tdengine
+```
